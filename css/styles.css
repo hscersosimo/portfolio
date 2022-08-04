@@ -1,0 +1,29 @@
+
+/* Custom fonts declarations */
+@font-face {
+    font-family: "LibreFranklin";
+    src: url("../assets/fonts/LibreFranklin-VariableFont_wght.ttf");
+  }
+
+html, body {
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    font-family: "LibreFranklin", Helvetica, Arial, Sans-Serif;
+}
+.header { 
+    text-align: center; 
+    }
+.logo { 
+    font-size: 24px; font-weight: bold;
+} 
+.nav { 
+    display: flex;
+    justify-content: center;
+}
+.nav div { 
+    margin: 0 10px;
+}
+.footer {
+    margin-top: auto;
+}
