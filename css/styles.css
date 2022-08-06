@@ -2,6 +2,7 @@
 :root {
   --text-color: #000000; 
   --main-color: #3486eb;
+  --background-color: #efefef;
 }
 
 /* Custom fonts declarations */
@@ -18,6 +19,8 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: "LibreFranklin", Helvetica, Arial, Sans-Serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 .header { 
     text-align: center; 
@@ -35,7 +38,60 @@ html, body {
 .footer {
     margin-top: auto;
 }
- 
+
+/* ============================== */
+/* Utility Classes                */
+/* ============================== */
+
+:root {
+  --xs: 5px;
+  --sm: 10px;
+  --md: 20px;
+  --lg: 30px;
+}
+.margin-xs { margin: var(--xs); }
+.margin-sm { margin: var(--sm); }
+.margin-md { margin: var(--md); }
+.margin-lg { margin: var(--lg); }
+.margin-top-xs { margin-top: var(--xs); }
+.margin-top-sm { margin-top: var(--sm); }
+.margin-top-md { margin-top: var(--md); }
+.margin-top-lg { margin-top: var(--lg); }
+.margin-right-xs { margin-right: var(--xs); }
+.margin-right-sm { margin-right: var(--sm); }
+.margin-right-md { margin-right: var(--md); }
+.margin-right-lg { margin-right: var(--lg); }
+.margin-bottom-xs { margin-bottom: var(--xs); }
+.margin-bottom-sm { margin-bottom: var(--sm); }
+.margin-bottom-md { margin-bottom: var(--md); }
+.margin-bottom-lg { margin-bottom: var(--lg); }
+.margin-left-xs { margin-left: var(--xs); }
+.margin-left-sm { margin-left: var(--sm); }
+.margin-left-md { margin-left: var(--md); }
+.margin-left-lg { margin-left: var(--lg); }
+
+.padding-xs { padding: var(--xs); }
+.padding-sm { padding: var(--sm); }
+.padding-md { padding: var(--md); }
+.padding-lg { padding: var(--lg); }
+.padding-top-xs { padding-top: var(--xs); }
+.padding-top-sm { padding-top: var(--sm); }
+.padding-top-md { padding-top: var(--md); }
+.padding-top-lg { padding-top: var(--lg); }
+.padding-right-xs { padding-right: var(--xs); }
+.padding-right-sm { padding-right: var(--sm); }
+.padding-right-md { padding-right: var(--md); }
+.padding-right-lg { padding-right: var(--lg); }
+.padding-bottom-xs { padding-bottom: var(--xs); }
+.padding-bottom-sm { padding-bottom: var(--sm); }
+.padding-bottom-md { padding-bottom: var(--md); }
+.padding-bottom-lg { padding-bottom: var(--lg); }
+.padding-left-xs { padding-left: var(--xs); }
+.padding-left-sm { padding-left: var(--sm); }
+.padding-left-md { padding-left: var(--md); }
+.padding-left-lg { padding-left: var(--lg); }
+
+
 /* ============================== */
 /* Image Grid                     */
 /* ============================== */
