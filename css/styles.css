@@ -1,3 +1,8 @@
+/* CSS Global Variables */
+:root {
+  --text-color: #000000; 
+  --main-color: #3486eb;
+}
 
 /* Custom fonts declarations */
 @font-face {
@@ -41,7 +46,7 @@ html, body {
     padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
+/* Create equal columns that sits next to each other */
 .column {
     flex: 25%;
     max-width: 25%;
@@ -49,7 +54,7 @@ html, body {
 }
 
 .column img {
-    margin-top: 8px;
+    margin-top: 2px;
     vertical-align: middle;
     width: 100%;
 }
@@ -71,6 +76,81 @@ html, body {
   }
 
 /* ============================== */
+/* Image effect                   */
+/* ============================== */
+
+#image-grid .item {
+  display: inline-block;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+}
+#image-grid .item:before {
+  content: "";
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  transition-property: top, opacity;
+  transition-duration: 0.3s;
+}
+#image-grid .item img {
+  display: block;
+  max-width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+#image-grid .item .details {
+  font-size: 16px;
+  padding: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+#image-grid .item .details span {
+  display: block;
+  opacity: 0;
+  position: relative;
+  top: 100px;
+  transition-property: top, opacity;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+}
+#image-grid .item .details .title {
+  line-height: 1;
+  font-weight: 600;
+  font-size: 18px;
+}
+#image-grid .item .details .info {
+  line-height: 1.2;
+  margin-top: 5px;
+  font-size: 12px;
+}
+#image-grid .item:focus:before,
+#image-grid .item:focus span, #image-grid .item:hover:before,
+#image-grid .item:hover span {
+  opacity: 1;
+}
+#image-grid .item:focus:before, #image-grid .item:hover:before {
+  top: 50%;
+}
+#image-grid .item:focus span, #image-grid .item:hover span {
+  top: 0;
+}
+#image-grid .item:focus .title, #image-grid .item:hover .title {
+  transition-delay: 0.15s;
+}
+#image-grid .item:focus .info, #image-grid .item:hover .info {
+  transition-delay: 0.25s;
+}
+
+/* ============================== */
 /* Modal                          */
 /* ============================== */
 
@@ -79,7 +159,7 @@ html, body {
     justify-content: center;
     align-items: center;
     position: fixed; 
-    z-index: 1; 
+    z-index: 99; 
     left: 0;
     top: 0;
     width: 100%; 
@@ -92,9 +172,17 @@ html, body {
 .modal-content {
     background-color: #fefefe;
     padding: 20px;
-    border: 1px solid #888;
-    width: 95%; 
-    height: 95%;
+    max-width: 95%;
+    max-height: 95%;
+
+}
+
+.modal-content .image-container {
+  overflow: hidden;
+}
+
+.modal-content img {
+
 }
 
 .close {
@@ -109,4 +197,25 @@ html, body {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* ============================== */
+/* Nav Hover Effect               */
+/* ============================== */
+
+.nav-hover {
+  --s: 0.1em;   /* the thickness of the line */
+  --c: #1095c1; /* the color */
+  
+  color: #0000;
+  padding-bottom: var(--s);
+  background: 
+    linear-gradient(90deg,var(--main-color) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+    linear-gradient(var(--main-color) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: 0.5s;
+}
+.nav-hover:hover {
+  --_p: 100%
 }

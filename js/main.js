@@ -11,7 +11,7 @@ var span = document.getElementsByClassName("close")[0];
 //var btn = document.getElementById("image-grid");
 
 // buttons is a node list. It looks and acts much like an array.
-const buttons = document.querySelectorAll('#image-grid img');
+const buttons = document.querySelectorAll('#image-grid .item');
 
 // we use the .forEach method to iterate through each button
 buttons.forEach((button) => {
