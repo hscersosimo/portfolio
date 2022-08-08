@@ -24,30 +24,9 @@
 </head>
 
 <body>
-
-  <!-- Modal -->
-  <div id="portfolioModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-
-      <div class="details">
-        <span class="title">Lorem Ipsum Dolor</span>
-        <span class="info">Quisque vel felis lectus donec vitae dapibus magna</span>
-      </div><!-- END details-->
-
-      <div class="image-container">
-        <img src="img/test6.jpg">
-      </div>
-
-    </div><!-- END modal-content -->
-  </div><!-- END modal -->
-
-  <div class="header">
-
-    <header></header>
   
-  </div><!-- END header-->
-
+  <div id="portfolioModal" class="modal" include-html="content/modal.html"></div>
+  <div include-html="content/header.html"></div>
 
   <div id="image-grid" class="row">
     <div class="column">
@@ -184,8 +163,8 @@
   
   
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/plugins.js" defer></script>
+  <script src="js/main.js" defer></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
