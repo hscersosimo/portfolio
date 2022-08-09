@@ -25,68 +25,104 @@
 
 <body>
   
-  <div id="portfolioModal" class="modal" include-html="content/modal.html"></div>
-  <div include-html="content/header.html"></div>
+  <div id="portfolioModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="image-container"></div>
+      <div class="details">
+        <h4 class="title"></h4>
+        <span class="description"></span>
+      </div>
+      
+      </div><!-- END modal-content -->  
+  </div>
+
+  <div class="header">
+    <div class="logo margin-top-md margin-bottom-xs">Name Surname</div>
+    <div class="description margin-bottom-lg">Product Designer</div>
+    
+    <div class="nav margin-bottom-lg">
+        <a href="" class="nav-hover">Home</a>
+        <a href="" class="nav-hover margin-left-sm">About</a>
+        <a href="" class="nav-hover margin-left-sm">Contact</a>
+    </div><!-- END nav-->
+  </div>
 
   <div id="image-grid" class="row">
     <div class="column">
-      <div class="item">
-        <img src="img/test1.jpg">
+      <div id="item1" class="item">
+        <div class="image-container">
+          <img src="img/test1.jpg">
+        </div>
         <div class="details">
-          <span class="title">Lorem Ipsum Dolor</span>
-          <span class="info">Quisque vel felis lectus donec vitae dapibus magna</span>
+          <span class="title">Item 1 Lorem Ipsum Dolor</span>
+          <span class="description">Item 1 Quisque vel felis lectus donec vitae dapibus magna</span>
         </div><!-- END details-->
       </div><!-- END item -->
-      <div class="item">
-        <img src="img/test2.jpg">
+      <div id="item2" class="item">
+        <div class="image-container">
+          <img src="img/test2.jpg">
+        </div>
         <div class="details">
-          <span class="title">Lorem Ipsum Dolor</span>
-          <span class="info">Quisque vel felis lectus donec vitae dapibus magna</span>
+          <span class="title">Item 2 Lorem Ipsum Dolor</span>
+          <span class="description">Item 2 Quisque vel felis lectus donec vitae dapibus magna</span>
         </div><!-- END details-->
       </div><!-- END item -->
-      <div class="item">
-        <img src="img/test3.jpg">
+      <div id="item3" class="item">
+        <div class="image-container">
+          <img src="img/test3.jpg">
+        </div>
         <div class="details">
-          <span class="title">Lorem Ipsum Dolor</span>
-          <span class="info">Quisque vel felis lectus donec vitae dapibus magna</span>
+          <span class="title">Item 3 Lorem Ipsum Dolor</span>
+          <span class="description">Item 3 Quisque vel felis lectus donec vitae dapibus magna</span>
         </div><!-- END details-->
       </div><!-- END item -->
-      <div class="item">
-        <img src="img/test4.jpg">
+      <div id="item4" class="item">
+        <div class="image-container">
+          <img src="img/test4.jpg">
+        </div>
         <div class="details">
           <span class="title">Lorem Ipsum Dolor</span>
-          <span class="info">Quisque vel felis lectus donec vitae dapibus magna</span>
+          <span class="description">Quisque vel felis lectus donec vitae dapibus magna</span>
         </div><!-- END details-->
       </div><!-- END item -->
     </div><!-- END column -->
 
     <div class="column">
-      <div class="item">
-        <img src="img/test6.jpg">
+      <div id="item5" class="item">
+        <div class="image-container">
+          <img src="img/test5.jpg">
+        </div>
         <div class="details">
-          <span class="title">Lorem Ipsum Dolor</span>
-          <span class="info">Quisque vel felis lectus donec vitae dapibus magna</span>
+          <span class="title">Lorem Ipsum Dolor1</span>
+          <span class="description">Quisque vel felis lectus donec vitae dapibus magna</span>
         </div><!-- END details-->
       </div><!-- END item -->
-      <div class="item">
-        <img src="img/test5.jpg">
+      <div id="item6" class="item">
+        <div class="image-container">
+          <img src="img/test6.jpg">
+        </div>
         <div class="details">
-          <span class="title">Lorem Ipsum Dolor</span>
-          <span class="info">Quisque vel felis lectus donec vitae dapibus magna</span>
+          <span class="title">Lorem Ipsum Dolor2</span>
+          <span class="description">Quisque vel felis lectus donec vitae dapibus magna</span>
         </div><!-- END details-->
       </div><!-- END item -->
-      <div class="item">
-        <img src="img/test4.jpg">
+      <div id="item7" class="item">
+        <div class="image-container">
+          <img src="img/test1.jpg">
+        </div>
         <div class="details">
           <span class="title">Lorem Ipsum Dolor</span>
-          <span class="info">Quisque vel felis lectus donec vitae dapibus magna</span>
+          <span class="description">Quisque vel felis lectus donec vitae dapibus magna</span>
         </div><!-- END details-->
       </div><!-- END item -->
-      <div class="item">
-        <img src="img/test3.jpg">
+      <div id="item8" class="item">
+        <div class="image-container">
+          <img src="img/test2.jpg">
+        </div>
         <div class="details">
           <span class="title">Lorem Ipsum Dolor</span>
-          <span class="info">Quisque vel felis lectus donec vitae dapibus magna</span>
+          <span class="description">Quisque vel felis lectus donec vitae dapibus magna</span>
         </div><!-- END details-->
       </div><!-- END item -->
     </div><!-- END column -->    
@@ -96,7 +132,7 @@
   </div><!-- END image-grid -->
 
   <div class="footer">
-    Footer / Contact Info
+    Footer / Contact description
   </div>
 
   

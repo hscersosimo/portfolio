@@ -19,10 +19,31 @@ window.onload = function() {
         button.addEventListener('click', () => {
           modal.style.display = "flex";
         });
-        // when the user clicks on the button, open the modal
+
+        // when the user clicks on the button, 
         button.onclick = function() {
+
+          
+          // Retrieve the modal content
+          let modalTitleContent = getContent(button.id, '.title');
+          let modalDescriptionContent = getContent(button.id, '.description');
+          let modalImageContent = getContent(button.id, '.image-container');
+
+
+          let modalTitle = document.querySelector('#portfolioModal .title');
+          modalTitle.innerHTML = modalTitleContent;
+
+          let modalDescription = document.querySelector('#portfolioModal .description');
+          modalDescription.innerHTML = modalDescriptionContent;
+
+          let modalImage = document.querySelector('#portfolioModal .image-container');
+          modalImage.innerHTML = modalImageContent;
+
+          // Open the modal
           modal.style.display = "flex";
+
         }
+
 
     });
     //When the user clicks on <span> (x), close the modal
@@ -39,4 +60,15 @@ window.onload = function() {
 }
 
 
+function getContent(itemID, selector) {
+
+  // Let's get the full selector name
+  let valueID = '#' + itemID + ' ' + selector;
+
+  // Get the value of the target selector
+  let value = document.querySelector(valueID).innerHTML;
+
+  // Return the content
+  return(value);
+}
 
